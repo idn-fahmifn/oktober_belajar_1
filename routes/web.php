@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -68,3 +70,14 @@ Route::prefix('training')->group(function () {
     })->name('kelas.laravel');
 
 });
+
+// method = argumentnya cuma 2.
+Route::get('kategori', [KategoriController::class, 'fahmi'] )
+->name('kategori');
+
+Route::get('create', [KategoriController::class, 'create'] )
+->name('kategori');
+
+Route::resource('product', ProdukController::class);
+
+Route::get('product-cetak', [ProdukController::class, 'print']);

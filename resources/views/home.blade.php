@@ -9,5 +9,7 @@
 <body>
     <h1>Ini halaman home</h1>
     <a href="{{ route('halaman.tujuan') }}">tujuan</a>
+    <a href="{{ route('kategori') }}">tujuan</a>
+    <a href="{{ route('product.create') }}">Buat Produk</a>
 </body>
 </html>
