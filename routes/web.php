@@ -13,7 +13,7 @@ Route::get('profile', function () {
     $data = 'Hallo ini adalah data';
     // return "Ini adalah resoin profile";
     return $data; //menampilkan nilai data
-});
+})->name('halaman-profile');
 
 Route::get('nama-halaman', function () {
     
@@ -43,3 +43,12 @@ Route::get('motor/{parameter?}', function ($data = null) {
         'motor' => $data
     ]);
 });
+
+Route::get('home', function(){
+    return view('home');
+});
+
+Route::get('tujuan', function(){
+    return view('tujuan');
+});
+
