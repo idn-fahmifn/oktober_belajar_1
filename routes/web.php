@@ -42,5 +42,4 @@ Route::get('motor/{parameter?}', function ($data = null) {
     return view('motor', [
         'motor' => $data
     ]);
-
 });
