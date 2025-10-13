@@ -36,6 +36,11 @@ Route::get('barang/{param}', function ($nama_barang) {
 });
 
 // parameter optional
-Route::get('motor/{parameter?}', function ($data = 'honda') {
-    return "ini adalah output detail motor";
+Route::get('motor/{parameter?}', function ($data = null) {
+    // return "ini adalah output detail motor";
+
+    return view('motor', [
+        'motor' => $data
+    ]);
+
 });
