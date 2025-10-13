@@ -8,6 +8,8 @@
 </head>
 <body>
     <h1>Ini halaman tujuan</h1>
-    <a href="#">home</a>
+    <a href="/home">home dengan slash</a> |
+    <a href="{{ route('halaman.home') }}">home dengan name</a>
+
 </body>
 </html>

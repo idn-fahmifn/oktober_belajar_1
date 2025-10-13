@@ -16,7 +16,7 @@ Route::get('profile', function () {
 })->name('halaman-profile');
 
 Route::get('nama-halaman', function () {
-    
+
     $data = 'ini adalah judul';
     $desc = 'ini adalah aplikasi pertamaku dengan laravel';
 
@@ -32,7 +32,7 @@ Route::get('nama-halaman', function () {
 // parameter wajib
 Route::get('barang/{param}', function ($nama_barang) {
     $parameter = $nama_barang;
-    return "ini adalah output detail ".$parameter;
+    return "ini adalah output detail " . $parameter;
 });
 
 // parameter optional
@@ -44,11 +44,27 @@ Route::get('motor/{parameter?}', function ($data = null) {
     ]);
 });
 
-Route::get('home', function(){
-    return view('home');
-});
 
-Route::get('tujuan', function(){
+Route::get('tujuan', function () {
     return view('tujuan');
-});
+})->name('halaman.tujuan');
 
+Route::prefix('training')->group(function () {
+
+    Route::get('mtcna', function () {
+        return 'ini adalah kelas mtcna';
+    })->name('kelas.mtcna');
+
+    Route::get('home', function () {
+        return view('home');
+    })->name('halaman.home');
+
+    Route::get('ccna', function () {
+        return 'ini adalah kelas ccna';
+    })->name('kelas.ccna');
+
+    Route::get('laravel', function () {
+        return 'ini adalah kelas laravel';
+    })->name('kelas.laravel');
+
+});

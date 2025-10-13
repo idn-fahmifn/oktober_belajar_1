@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>Ini halaman home</h1>
-    <a href="#">tujuan</a>
+    <a href="{{ route('halaman.tujuan') }}">tujuan</a>
 </body>
 </html>
