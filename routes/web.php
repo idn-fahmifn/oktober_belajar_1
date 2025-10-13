@@ -10,7 +10,6 @@ Route::get('/', function () {
 Route::get('profile', function () {
 
     // jika profile dipanggil, maka akan menampilkan :
-
     $data = 'Hallo ini adalah data';
     // return "Ini adalah resoin profile";
     return $data; //menampilkan nilai data
@@ -28,13 +27,12 @@ Route::get('nama-halaman', function () {
         'data' => $data,
         'desc' => $desc
     ]);
-
 });
 
 // parameter wajib
-Route::get('barang/{parameter}', function () {
-
-    return "ini adalah output detail barang";
+Route::get('barang/{param}', function ($nama_barang) {
+    $parameter = $nama_barang;
+    return "ini adalah output detail ".$parameter;
 });
 
 // parameter optional
