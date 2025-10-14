@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\UmurController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -81,3 +82,23 @@ Route::get('create', [KategoriController::class, 'create'] )
 Route::resource('product', ProdukController::class);
 
 Route::get('product-cetak', [ProdukController::class, 'print']);
+
+
+// route untuk umur
+Route::prefix('umur')->group(function(){
+
+    /**
+     * 1 Buatkan route untuk form umur
+     * 2.buatkan route untuk success
+     * 3.buatkan method untuk mengatur atau mengolah data (Post)
+     */
+
+    // Route form
+    
+    Route::get('halaman-form', [UmurController::class, 'form'])
+    ->name('umur.form');
+
+    // ROute success
+    // Route prosess
+
+});
