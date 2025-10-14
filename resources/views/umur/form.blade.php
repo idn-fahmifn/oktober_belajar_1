@@ -15,6 +15,7 @@
             <div class="card-body">
                 <div class="card-title">Masukan umur kamu dibawah :</div>
 
+    
                 @if ($errors->any())
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
                         <strong>Wah ada error!</strong>
@@ -23,6 +24,14 @@
                             <li>{{ $row }}</li>
                             @endforeach
                         </ol>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
+                @if (session('gagal'))
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>gagal euy!</strong> 
+                        {{ session('gagal') }}
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif

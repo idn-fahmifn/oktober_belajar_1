@@ -3,6 +3,7 @@
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\UmurController;
+use App\Http\Middleware\UmurMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -100,6 +101,7 @@ Route::prefix('umur')->group(function () {
 
     // ROute success
     Route::get('sukses', [UmurController::class, 'sukses'])
+        ->middleware(UmurMiddleware::class)
         ->name('umur.sukses');
 
     // Route prosess

@@ -28,10 +28,14 @@ class UmurController extends Controller
             'age.min' => 'Salah om, minimal 1 umurnya',
             'age.max' => 'Salah om, maksimal 90 umurnya',
             'age.required' => 'Salah om, wajib diisi',
-
         ]);
+        // buatkan sebuah session umur agar data umur bisa diproses di middleware
+        $request->session()
+        ->put('umur', $request->input('age'));
 
         return redirect()->route('umur.sukses');
+
+        // data hilang
     }
 
     public function sukses()
