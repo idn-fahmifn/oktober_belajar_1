@@ -108,3 +108,6 @@ Route::prefix('umur')->group(function () {
     Route::post('proses', [UmurController::class, 'proses'])
         ->name('umur.proses');
 });
+
+Route::get('list-produk', [ProdukController::class, 'listProduk'])
+->name('produk.list');

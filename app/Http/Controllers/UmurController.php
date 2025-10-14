@@ -40,7 +40,11 @@ class UmurController extends Controller
 
     public function sukses()
     {
-        return view('umur.sukses');
+        $data = [
+            'ucapan' => 'hallo selamat datang'
+        ];
+        return view('umur.sukses', $data);
+        
     }
 
 

@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Produk;
 use Illuminate\Http\Request;
 
 class ProdukController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         return "ini index produk";
+    }
+
+    public function listProduk()
+    {
+        $data = Produk::all();
+        return view('produk', compact('data'));
     }
 
     /**

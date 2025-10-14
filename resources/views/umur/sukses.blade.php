@@ -10,7 +10,8 @@
     <div class="container mt-4">
         <div class="card p-4">
             <div class="card-body">
-                <div class="card-title h2">Sukses euy,</div>                
+                <div class="card-title h2">Sukses euy,</div>  
+                <p>{{ $ucapan }}</p>              
             </div>
         </div>
     </div>
