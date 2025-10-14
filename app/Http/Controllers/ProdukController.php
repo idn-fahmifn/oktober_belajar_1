@@ -15,6 +15,7 @@ class ProdukController extends Controller
     public function listProduk()
     {
         $data = Produk::all();
+        // $data = Produk::paginate(10);
         return view('produk', compact('data'));
     }
 
