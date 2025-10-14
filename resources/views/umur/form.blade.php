@@ -13,14 +13,15 @@
                 <div class="card-title">Masukan umur kamu dibawah :</div>
 
                 <div class="mt-4">
-                    <form action="" method="post">
+                    <form action="{{ Route('umur.proses') }}" method="post">
+                        @csrf
                         <div class="form-group mt-2">
                             <label for="">Nama Kamu</label>
-                            <input type="text" name="nama" class="form-control mt-1" required>
+                            <input type="text" name="name" class="form-control mt-1" required>
                         </div>
                         <div class="form-group mt-2">
                             <label for="">Umur</label>
-                            <input type="number" name="umur" class="form-control mt-1" required>
+                            <input type="number" name="age" class="form-control mt-1" required>
                         </div>
                         <div class="form-group mt-2">
                             <button type="submit" class="btn btn-success">Kirim</button>

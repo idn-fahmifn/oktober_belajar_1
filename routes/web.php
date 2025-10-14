@@ -73,11 +73,11 @@ Route::prefix('training')->group(function () {
 });
 
 // method = argumentnya cuma 2.
-Route::get('kategori', [KategoriController::class, 'fahmi'] )
-->name('kategori');
+Route::get('kategori', [KategoriController::class, 'fahmi'])
+    ->name('kategori');
 
-Route::get('create', [KategoriController::class, 'create'] )
-->name('kategori');
+Route::get('create', [KategoriController::class, 'create'])
+    ->name('kategori');
 
 Route::resource('product', ProdukController::class);
 
@@ -85,7 +85,7 @@ Route::get('product-cetak', [ProdukController::class, 'print']);
 
 
 // route untuk umur
-Route::prefix('umur')->group(function(){
+Route::prefix('umur')->group(function () {
 
     /**
      * 1 Buatkan route untuk form umur
@@ -94,11 +94,15 @@ Route::prefix('umur')->group(function(){
      */
 
     // Route form
-    
+
     Route::get('halaman-form', [UmurController::class, 'form'])
-    ->name('umur.form');
+        ->name('umur.form');
 
     // ROute success
-    // Route prosess
+    Route::get('sukses', [UmurController::class, 'sukses'])
+        ->name('umur.sukses');
 
+    // Route prosess
+    Route::post('proses', [UmurController::class, 'proses'])
+        ->name('umur.proses');
 });
