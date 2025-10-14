@@ -11,6 +11,22 @@
         <div class="card p-4">
             <div class="card-body">
                 <div class="card-title">Masukan umur kamu dibawah :</div>
+
+                <div class="mt-4">
+                    <form action="" method="post">
+                        <div class="form-group mt-2">
+                            <label for="">Nama Kamu</label>
+                            <input type="text" name="nama" class="form-control mt-1" required>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="">Umur</label>
+                            <input type="number" name="umur" class="form-control mt-1" required>
+                        </div>
+                        <div class="form-group mt-2">
+                            <button type="submit" class="btn btn-success">Kirim</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
