@@ -109,6 +109,7 @@ Route::prefix('umur')->group(function () {
 Route::get('list-produk', [ProdukController::class, 'listProduk'])
     ->name('produk.list');
 
+Route::view('tampilan', 'template.template');
 
 Route::get('home', function () {
     return view('home');
