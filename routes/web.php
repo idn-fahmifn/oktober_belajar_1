@@ -59,9 +59,6 @@ Route::prefix('training')->group(function () {
         return 'ini adalah kelas mtcna';
     })->name('kelas.mtcna');
 
-    Route::get('home', function () {
-        return view('home');
-    })->name('halaman.home');
 
     Route::get('ccna', function () {
         return 'ini adalah kelas ccna';
@@ -110,4 +107,9 @@ Route::prefix('umur')->group(function () {
 });
 
 Route::get('list-produk', [ProdukController::class, 'listProduk'])
-->name('produk.list');
+    ->name('produk.list');
+
+
+Route::get('home', function () {
+    return view('home');
+})->name('halaman.home');

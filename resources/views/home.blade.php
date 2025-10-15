@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Ini halaman home</h1>
-    <a href="{{ route('halaman.tujuan') }}">tujuan</a>
-    <a href="{{ route('kategori') }}">tujuan</a>
-    <a href="{{ route('product.create') }}">Buat Produk</a>
-</body>
-</html>
+@extends('template.template')
+
+@section('judul')
+Judul Home
+@endsection
+
+@section('sub-title')
+    ini adalah halaman home aplikasi
+@endsection
+
+@section('content')
+    <div class="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ducimus libero dolorum nesciunt, dolores aut ipsa. Debitis nobis maiores vel dolor. Commodi ipsam quibusdam, pariatur inventore facere voluptatum impedit quidem!
+    </div>
+@endsection
